@@ -11,7 +11,7 @@ from engine import Engine
 class MamontEngine(Engine):
 
     def __init__(self):
-        super(MamontEngine, self).__init__('Mamont', 'http://www.mmnt.ru/')
+        super(MamontEngine, self).__init__('Mamont', 'https://www.mmnt.ru/')
 
     def search(self, keyword):
         search_url = urllib.parse.urljoin(self.base_url, f'/int/get?st={keyword}')
