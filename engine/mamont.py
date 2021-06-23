@@ -24,7 +24,7 @@ class MamontEngine(Engine):
             yield ftp_url
 
     def _fetch_async(self, keyword, total_pages):
-        base_url = f'http://www.mmnt.ru/int/get?in=f&st={keyword}&ot='
+        base_url = f'https://www.mmnt.ru/int/get?in=f&st={keyword}&ot='
         urls = [base_url + str((i * 20) + 1) for i in range(total_pages+1)]
         pool = ThreadPool()
         for ftp_urls in pool.imap(self._process_url, urls):
